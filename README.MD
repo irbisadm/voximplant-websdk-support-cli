@@ -1,9 +1,9 @@
-#Voximplant websdk support plugin
+# Voximplant websdk support plugin
 
 This plugin simplifies collecting logs for the Voximplant WebSDK. You can use this module as is or create your code based on
 it. This module based on the [WebSDK logging callback](https://voximplant.com/docs/references/websdk/voximplant/client#setloggercallback).
 
-##Installation
+## Installation
 You can use this module as a regular script. Just import it *after* the Voximplant WebSDK:
 ```html
 <script type="text/javascript" src="//cdn.voximplant.com/edge/voximplant.min.js"></script>​
@@ -11,7 +11,7 @@ You can use this module as a regular script. Just import it *after* the Voximpla
 ```
 The script will add the `VoxImplantSupport` property to the `window` object.
 
-##Initialization
+## Initialization
 Please, call the `init` function with a collected logs URL as an argument:
 
 ```javascript
@@ -24,7 +24,7 @@ Parameters
 |reportServer|+|-|`String` Server for sending logs|
 |library|-|window.VoxImplant|`Link` URL to the Voximplant WebSDK, if you don't export it to the window|
 
-##Send report
+## Send report
 You can send logs manually, using the `sendLogs` function:
 ```javascript
 window.VoxImplantSupport.sendLogs();
@@ -40,7 +40,7 @@ Logs will be sent in the `sdk_log` field.
 
 The additional info will be sent in the `info` field.
 
-##Callbacks
+## Callbacks
 *onLogSent* - success callback function 
 
 *onSendingError* - error callback function
@@ -55,7 +55,7 @@ window.VoxImplantSupport.onSendingError = () => {
 ```
 If handlers are not set, the library displays result as a default `alert` message.
 
-##Render button
+## Render button
 You can render a default button with this library:
 ```javascript
 window.VoxImplantSupport.renderButton()
